@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anggota</title>
+    <link rel="shortcut icon" href="images/favicon-removebg-preview.png" type="image/x-icon">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Chau+Philomene+One:ital@0;1&family=Gravitas+One&family=Hammersmith+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Parisienne&family=Sofia&display=swap" rel="stylesheet">
+<style>
+* {margin: 0; padding: 0;}
+header {
+  background-image: url('https://images.pexels.com/photos/1070534/pexels-photo-1070534.jpeg');
+  background-size: cover;
+  background-position: center; 
+  height: 300px;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4);
+}
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  text-align: left;
+  margin-left: 320px;
+}
+.parisienne-regular {
+  font-family: "Parisienne", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 156px;
+  text-align: center;
+}
+nav {
+  background: #186253;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 50px;
+  transition: color 0.3s;
+  font-family: "Hammersmith One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+}
+nav a:hover {
+  color: #f1c40f;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1f7a66;
+  min-width: 180px;
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  text-align: left;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  margin: 0;
+  transition: background 0.3s;
+}
+.dropdown-content a:hover {
+  background-color: #145e49;
+  color: #f1c40f;
+}
+body {
+    background-color: #f9f9d1;
+}
+h2 {
+  margin-top: 50px;
+  margin-left: 20%;
+  margin-bottom: 50px;
+  border-left: 8px solid rgb(209, 100, 57); 
+  text-align: left; 
+  padding-left: 10px;
+  color: firebrick; 
+}
+.chau-philomene-one-regular {
+  font-family: "Chau Philomene One", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  font-style: normal;
+}
+footer {
+  background-color: #186253;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+form {
+  margin: 40px auto;
+  width: 50%;
+  background: #1f7a66;
+  padding: 30px 35px;
+  border-radius: 12px;
+  font-family: "Lato", sans-serif;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+form label {
+  display: inline-block;
+  width: 150px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+form input[type="text"],
+form input[type="tel"] {
+  width: calc(100% - 180px); /* menyesuaikan ruang setelah label */
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid firebrick;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 15px;
+  vertical-align: middle;
+}
+form input[type="date"] {
+  width: calc(100% - 180px);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid firebrick;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 15px;
+  vertical-align: middle;
+  color: #333;
+}
+form select{
+  width: calc(100% - 160px);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid firebrick;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 15px;
+  vertical-align: middle;
+  color: #333;
+}
+form textarea {
+  width: calc(100% - 180px);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid firebrick;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 15px;
+  vertical-align: middle;
+  color: #333;
+}
+/* tombol submit */
+form input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: rgb(209, 100, 57);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+form input[type="submit"]:hover {
+  background: firebrick;
+}
+</style>
+</style>
+</head>
+<body>
+<header>
+  <br>
+  <br>
+  <p class="lato-bold">Komunitas Seni</p>
+  <p class="parisienne-regular">Purnawarna</p>
+ </header>
+
+<nav>
+    <a href="index.html">Home</a>
+  <div class="dropdown">
+    <a href="#about">About</a>
+      <div class="dropdown-content">
+          <a href="profil.html"> Profil Lembaga</a>
+            <a href="sejarah.html">Sejarah</a>
+            <a href="visimisi.html">Visi & Misi</a>
+            <a href="struktur.html">Struktur Organisasi</a>
+      </div>
+  </div>
+    <a href="gallery.html">Gallery</a>
+  <div class="dropdown">
+    <a href="#regist">Registration</a>
+      <div class="dropdown-content">
+          <a href="tiket.html"> Tiket Pameran</a>
+          <a href="openstudio.html">Reservasi Open Studio</a>
+          <a href="kelas.html">Registrasi Kelas Melukis</a>
+          <a href="anggota.html">Pendaftaran Anggota</a>
+      </div>
+  </div>
+    <a href="kontak.html">Contact</a>
+</nav>
+    
+<h2 class="chau-philomene-one-regular">Pendaftaran Anggota</h2>
+
+<!--form regist-->
+<section id="pesan">
+    <form>
+      <label for="nama">👤 Nama:</label>
+      <input type="text" id="nama" name="nama" placeholder="Tulis nama kamu...">
+
+      <label for="telepon">📞 Nomor Telepon:</label>
+      <input type="tel" id="telepon" name="telepon" placeholder="0812xxxxxxx">
+
+      <label for="alamat">🏡 Alamat:</label>
+      <input type="text" id="alamat" name="alamat" placeholder="Tulis alamat lengkap...">
+      
+      <label for="pekerjaan">🧑‍🏫 Pekerjaan:</label>
+      <select id="pekerjaan" name="pekerjaan">
+        <option value="pelukis">Pelukis Profesional</option>
+        <option value="pengajar">Pengajar</option>
+        <option value="mahasiswa">Mahasiswa</option>
+        <option value="siswa">Siswa</option>
+        <option value="lainnya">Lainnya</option>
+      </select>
+
+      <label for="tanggal">🗓️ Tanggal Lahir:</label>
+      <input type="date" id="tanggal" name="tanggal">
+
+      <label for="pesan">💬 Alasan:</label>
+      <textarea id="pesan" name="pesan" rows="4" placeholder="..."></textarea>
+
+      <input type="submit" value="🚀 Daftar">
+    </form>
+  </section>
+
+<br>
+<br>
+<br>
+<footer>
+  <p>© 2025 - Inggar Indraswari - 5A. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
